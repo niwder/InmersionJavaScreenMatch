@@ -1,41 +1,25 @@
-import java.util.Scanner;
+import modelo.Pelicula;
+import modelo.Serie;
 
 public class Screenmatch {
     public static void main(String[] args) {
-        //System.out.println("Pelicula Forrest Gump");
+        Principal principal = new Principal();
+        principal.muestraElMenu();
 
-        int fechaDeLanzamiento = 1994;
-        double evaluacion = 9.8;
-        boolean incluidoEnElPlan = true;
-        String nombre = "Forrest Gump";
-        String sinopsis = """
-                Forrest Gump es un chico que, con sus limitaciones, contempla la vida con una mirada tierna y cándida. Su persistencia y bondad, valores que le ha inculcado su protectora madre, le llevan a vivir insospechadas peripecias que son un testimonio de la historia de Estados Unidos entre 1950 y 1980.              
-                """;
-        double mediaEvaluacionUsario = 0;
+        /* Pelicula forrestGump = new Pelicula();
+        forrestGump.setNombre("Forrest Gump");
+        forrestGump.setTiempoDeDuracionEnMinutos(150);
+        forrestGump.setFechaDeLanzamiento(1997);
 
-        System.out.println("Pelicula: " + nombre);
-        System.out.println("Sinopsis: " + sinopsis);
-        System.out.println("Fecha de lanzamiento: " + fechaDeLanzamiento);
-        System.out.println("Calificacion: " + evaluacion);
-        System.out.println(incluidoEnElPlan);
+        forrestGump.muestraFichaTecnica();
 
-        double mediaEvaluacion = (9.8 + 9.7 + 9.9) / 3;
-        System.out.println("Media Calificacion: " + mediaEvaluacion);
+        Serie HouseOfDragons = new Serie();
+        HouseOfDragons.setNombre("House Of Dragons");
+        HouseOfDragons.setFechaDeLanzamiento(2023);
+        HouseOfDragons.setTemporadas(1);
+        HouseOfDragons.setEpisodiosPorTemporada(10);
+        HouseOfDragons.setDuracionEnMinutosporEpisodio(50);
+        HouseOfDragons.muestraFichaTecnica(); */
 
-        //depende de como yo ponga menor(<) o mayor (>) esto funciona bien.
-        if (fechaDeLanzamiento >= 2023){
-            System.out.println("Pelicula popular en el momento");
-        } else {
-            System.out.println("Pelicula Retro que vale la pena ver");
-        }
-
-        for (int i = 0; i < 3; i++) {
-            Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingrese su calificacion: ");
-            double calificacionPelicula = teclado.nextDouble();
-            mediaEvaluacionUsario = mediaEvaluacionUsario + calificacionPelicula;
-            }
-        System.out.println("La media de la pelicula "
-        + "Forrest Gump calculada por el usario es: " + mediaEvaluacionUsario / 3 );
     }
 }
